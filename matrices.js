@@ -88,6 +88,26 @@ function mostrarDiagonalSuperiorDerecha() {
         }
     }
 }
+
+function mostrarInferiorDerecho() {
+    for (let f = 0; f < matriz.length; f++) {
+        for (let c = 4-f; c < matriz.length; c++) {
+            let ident = 'd-f' + f + 'c' + c;
+            document.getElementById(ident).innerText = matriz[f][c]
+            //matriz[f][c]
+        }
+    }
+}
+
+function mostrarInferiorIzquierdo() {
+    for (let f = 0; f < matriz.length; f++) {
+        for (let c = 0; c <= f; c++) {
+            let ident = 'd-f' + f + 'c' + c;
+            document.getElementById(ident).innerText = matriz[f][c]
+            //matriz[f][c]
+        }
+    }
+}
     
 
 
@@ -127,9 +147,11 @@ function mostrarDiagonalSuperiorDerecha() {
                 break
 
             case '6':
+                mostrarInferiorIzquierdo();
                 break
 
             case '7':
+                mostrarInferiorDerecho();
                 break
 
             case '8':
